@@ -14,7 +14,7 @@ class TodoController extends Controller
     public function index()
     {
         //todo一覧labelsと関連付けさせて取得
-        $todos = Todo::with('todo_labels')->get();
+        $todos = Todo::all();
         return response()->json($todos, 200, [], JSON_UNESCAPED_UNICODE)
     ->header('Content-Type', 'application/json; charset=utf-8');
 
