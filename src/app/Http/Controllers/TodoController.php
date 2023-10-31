@@ -48,6 +48,9 @@ class TodoController extends Controller
         $todo = Todo::find($id);
         $todo->completed = $request->completed;
         $todo->save();
+        return response()->json([
+            'todo' => $todo
+        ]);
     }
 
     /**
