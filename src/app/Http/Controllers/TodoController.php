@@ -27,8 +27,7 @@ class TodoController extends Controller
     {
         $todo = Todo::create($request->all());
         return response()->json([
-            // 'todo' => $todo
-            $todo, 201, [], JSON_UNESCAPED_UNICODE
+             'todo' => $todo
         ]);
     }
 
