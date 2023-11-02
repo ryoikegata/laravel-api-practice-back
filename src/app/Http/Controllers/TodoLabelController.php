@@ -22,7 +22,10 @@ class TodoLabelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $label = Todo_label::create($request->all());
+        return response()->json([
+             'label' => $label
+        ]);
     }
 
     /**
